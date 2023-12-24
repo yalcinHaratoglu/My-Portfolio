@@ -21,7 +21,7 @@ for (let i = 0; i < totalNavList; i++) {
     removeBackSection();
     for (let j = 0; j < totalNavList; j++) {
       if (navList[j].querySelector("a").classList.contains("active")) {
-        addBackSection();
+        addBackSection(j);
       }
       navList[j].querySelector("a").classList.remove("active");
     }
@@ -32,8 +32,10 @@ for (let i = 0; i < totalNavList; i++) {
     }
   });
 }
-function removeBackSection() {
-  for (let i = 0; i < totalSection; i++) {
+function removeBackSection()
+ {
+  for (let i = 0; i < totalSection; i++) 
+  {
     allSection[i].classList.remove("back-section");
   }
 }
@@ -56,10 +58,8 @@ function updateNav(element) {
   for (let i = 0; i < totalNavList; i++) {
     navList[i].querySelector("a").classList.remove("active");
     const target = element.getAttribute("href").split("#")[1];
-    if (
-      target ===
-      navList[i].querySelector("a").getAttribute("href").split("#"[1])
-    ) {
+    if (target === navList[i].querySelector("a").getAttribute("href").split("#")[1])
+    {
       navList[i].querySelector("a").classList.add("active");
     }
   }
