@@ -76,7 +76,9 @@ ul {
 .hidden {
   display: none !important;
 }
-
+.wrap {
+  word-wrap: break-word;
+}
 .padd-15 {
   padding-left: 15px;
   padding-right: 15px;
